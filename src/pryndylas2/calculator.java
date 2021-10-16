@@ -1,31 +1,42 @@
 package pryndylas2;
+
 import java.util.Scanner;
+
 public class calculator {
-    public static void main(String[] args){
-        double num1;
-        double num2;
-        double ans;
-        char op;
-        Scanner reader = new Scanner(System.in);
-        System.out.print("Введіть перше число для дії: ");
-        num1 = reader.nextDouble();
-        System.out.print("Введіть перше друге для дії: ");
-        num2 = reader.nextDouble();
-        System.out.print("\nОберіть дію яку потрібно зробити (+, -, *, /): ");
-        op = reader.next().charAt(0);
-        switch(op) {
-            case '+': ans = num1 + num2;
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
+        System.out.println("Введіть перше число : ");
+        int  operand1 = read.nextInt();
+        System.out.println("Введіть друге число : ");
+        int  operand2 = read.nextInt();
+        System.out.println("Оберіть дію (+,-,/,*) :");
+        char  sign  = read.next().charAt(0);
+        int result ;
+        switch (sign) {
+            case '+':
+                result = operand1 + operand2;
+                System.out.println("Результат операції: "+result);
                 break;
-            case '-': ans = num1 - num2;
+            case '-':
+                result = operand1 - operand2;
+                System.out.println("Результат операції: "+result);
                 break;
-            case '*': ans = num1 * num2;
+            case '*':
+                result = operand1 * operand2;
+                System.out.println("Результат операції: "+result);
                 break;
-            case '/': ans = num1 / num2;
-                break;
-            default:  System.out.printf("Помилка ,не вірне значення)");
-                return;
+            case '/':
+                if (operand2 == 0) {
+                    System.out.println("За таке в школі по жопі б'ють");
+                    break;
+                }else {
+                    result = operand1 / operand2;
+                    System.out.println("Результат операції: "+result);
+                    break;}
+            default:
+                System.out.println("Операция не разпізнана.");
         }
-        System.out.print("\nThe result is given as follows:\n");
-        System.out.printf(num1 + " " + op + " " + num2 + " = " + ans);
+
     }
+
 }
