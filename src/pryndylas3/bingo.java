@@ -4,16 +4,27 @@ public class bingo {
     public static void main(String[] args){
 
         int a = (int) ( Math.random() * 100 );
-        System.out.println(a);
+       // System.out.println(a);
+        int n;
+        int k=0;
+        do {
+
+
 
         {
 
 
 
                 Scanner read = new Scanner(System.in);
-                System.out.println("Введіть ваше число : ");
-                int n = read.nextInt();
-                if (n < a) {
+                System.out.println("Вгадайте число : ");
+                n = read.nextInt();
+                k++;
+                if (n == 000) {
+            System.out.println("гарного дня)");
+
+
+        }
+                else if (n < a) {
                     System.out.println("введіть більше значення");
 
                 } else if (n > a) {
@@ -21,14 +32,13 @@ public class bingo {
 
                 } else if (n == a)
                 {
-                    System.out.println("бінго");
-                }
-            else if (n == 000) {
-                    System.out.println("гарного дня)");
-
+                    System.out.println("Бінго, ви використали спроб : " + k);
                 }
 
-        }
+             }
+
+
+        }while(a!=n);
 
 
     }
