@@ -4,7 +4,7 @@ public class bingo {
     public static void main(String[] args){
 
         int a = (int) ( Math.random() * 100 );
-       // System.out.println(a);
+      // System.out.println(a);
         int n;
         int k=0;
         do {
@@ -16,12 +16,12 @@ public class bingo {
 
 
                 Scanner read = new Scanner(System.in);
-                System.out.println("Вгадайте число : ");
+                System.out.println("Вгадайте число (для виходу з гри напишіть відємне число): ");
                 n = read.nextInt();
                 k++;
-                if (n == 000) {
-            System.out.println("гарного дня)");
-
+                if (n <0) {
+            System.out.println("Гарного дня)");
+break;
 
         }
                 else if (n < a) {
