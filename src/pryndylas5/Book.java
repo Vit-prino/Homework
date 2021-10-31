@@ -35,9 +35,23 @@ public class Book {
     public void setYear(int year) {
         this.year = year;
     }
+    public void  takeBook(String fio, int n) {
+        System.out.println(fio+"взяв книги " + n);
+    }
+    public void  takeBook(String autor, String namebook) {
+        System.out.println(autor+"взяв книги " + namebook);
+    }
 
-
+    public void  takeBook(String autor, String namebook , String year) {
+        System.out.println(autor+"взяв книги " + namebook +","+ year);
+    }
+    public void  returnBook(String fio, int n) {
+        System.out.println(fio+"вернув книги " + n);
+    }
+    public void  returnBook(String autor, String namebook) {
+        System.out.println(autor+"вернув книги " + namebook);
+    }
     String getInfo() {
-        return "Назва :" + namebook + "(автор: " + autor +",рік:" + year +")";
+        return  namebook + "(автор: " + autor +",рік:" + year +")";
     }
 }

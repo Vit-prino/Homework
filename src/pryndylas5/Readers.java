@@ -38,9 +38,8 @@ public class Readers {
     public void setNumberfone(String numberfone) {
         this.numberfone = numberfone;
     }
-    public void  takeBook(String namebook){
-        System.out.println("Петров В.В. взяв книги : ");
-    }String getInfo() {
+
+    String getInfo() {
         return "Ім'я:" + fio + "Номер читацького:" + numbertic +"телефон:" + numberfone +".";
     }
 
